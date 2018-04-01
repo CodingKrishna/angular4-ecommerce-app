@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "s3",
+      "price": 10000,
+      "description": "Test description"
+    },
+    {
+      "id": 2,
+      "name": "siva",
+      "price": 123,
+      "description": "eee"
+    },
+    {
+      "id": 3,
+      "name": "Ram",
+      "price": 1234,
+      "description": "test"
+    },
+    {
+      "id": 4,
+      "name": "xyz",
+      "price": 123,
+      "description": "eee"
+    }
+  ]
+}
