@@ -1,0 +1,13 @@
+<div> 
+    <form #product = "ngForm" (ngSubmit) = "handleAddProduct(product.value)">
+        <input type = "number" name = "id" placeholder = "id" ngModel>
+        <br/>
+        <input type = "string" name = "name" placeholder = "name" ngModel>
+        <br/>
+        <input type = "number" name = "price" placeholder = "price" ngModel>
+        <br/>
+        <input type = "string" name = "description" placeholder = "description" ngModel>
+        <br/>
+        <input type = "submit" value = "submit">
+    </form>
+</div>

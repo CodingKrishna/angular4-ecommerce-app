@@ -1,0 +1,14 @@
+<div>Product List
+    <search></search>
+
+    <table>
+        <tr><td>Proudct Id</td> <td>Name</td> <td>Price</td> <td> Description </td></tr>
+        <tr *ngFor="let product of productList">
+            <td>{{product.id}}</td> 
+            <td>{{product.name}}</td> 
+            <td>{{product.price}}</td> 
+            <td>{{product.description}}</td>
+        </tr>
+    </table>
+
+</div>
