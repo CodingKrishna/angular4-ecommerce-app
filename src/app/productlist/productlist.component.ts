@@ -12,6 +12,7 @@ export class ProudctList{
     searchSubscription: Subscription;
     originalProductList: Product[] = [];
     productList: Product[] = [];
+    
     constructor(private productService: ProductService, private sharedService: SharedService){
         this.searchSubscription = this.sharedService.searchString$.subscribe(
             searchString =>{ 
@@ -30,11 +31,22 @@ export class ProudctList{
     }
 
     ngOnInit() {
+        this.getAllProducts();
+     }
+
+     getAllProducts ()  {
         this.productService.getAll()
-            .subscribe(products => {
-                this.productList = products;
-                this.originalProductList = products;
-            })
+        .subscribe(products => {
+            this.productList = products;
+            this.originalProductList = products;
+        })
      }
     
+     deleteProduct (productId) {
+        console.log('deleteProduct>>', productId);
+        this.productService.delete(productId).subscribe(res =>{
+            console.log('delete res>>', res);
+            this.getAllProducts();
+        });
+     }
 }

@@ -14,17 +14,19 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { ProudctList } from './productlist/productlist.component';
 import { AddProudct } from './addproduct/addproduct.component';
+import { EditProudct } from './editproduct/editproduct.component';
 import { SearchComponent } from './search/search.component';
 import { SharedService } from './sharedservice/shared.service';
 
 const appRoutesConfig: Routes = [
   { path: 'productlist', component: ProudctList },
-  { path: 'addproduct',      component: AddProudct },
+  { path: 'addproduct',component: AddProudct },
+  { path: 'editproduct/:id',component: EditProudct },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, LayoutComponent, AppHeader, Footer, ProudctList, SearchComponent, AddProudct
+    AppComponent, LayoutComponent, AppHeader, Footer, ProudctList, SearchComponent, AddProudct,EditProudct
   ],
   imports: [
     BrowserModule, FormsModule,ReactiveFormsModule,HttpModule, HttpClientModule, RouterModule.forRoot(appRoutesConfig)

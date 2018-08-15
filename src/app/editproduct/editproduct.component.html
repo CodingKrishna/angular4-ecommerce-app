@@ -1,0 +1,14 @@
+<div> 
+    Edit Page ..
+    <form (ngSubmit) = "handleEditProduct(product)">
+        <input type = "number" name = "id" placeholder = "id" [(ngModel)]="product.id">
+        <br/>
+        <input type = "string" name = "name" placeholder = "name" [(ngModel)]="product.name">
+        <br/>
+        <input type = "number" name = "price" placeholder = "price" [(ngModel)]="product.price">
+        <br/>
+        <input type = "string" name = "description" placeholder = "description" [(ngModel)]="product.description">
+        <br/>
+        <input type = "submit" value = "submit">
+    </form>
+</div>
